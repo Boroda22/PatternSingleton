@@ -22,6 +22,8 @@ namespace PatternSingleton
             {
                 Console.WriteLine("Переменные содержат разные экземпляры");
             }
+
+            Console.ReadKey();
         }
     }
 }

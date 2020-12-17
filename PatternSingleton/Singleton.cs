@@ -17,19 +17,19 @@ namespace PatternSingleton
 
         /* Объект одиночки храниться в статичном поле класса.
          * Недостатком является неспособность правильно работать в многопоточной среде.*/
-        private static Singleton _instance;
+        private static Singleton instance;
 
         /* Это статический метод, управляющий доступом к экземпляру одиночки.
          * При первом запуске, он создаёт экземпляр одиночки и помещает его в статическое поле.
          * При последующих запусках, он возвращает клиенту объект, хранящийся в статическом поле.*/
         public static Singleton GetInstance()
         {
-            if(_instance == null)
+            if(instance == null)
             {
-                _instance = new Singleton();
+                instance = new Singleton();
             }
 
-            return _instance;
+            return instance;
         }
 
         /* Любой одиночка должен содержать некоторую бизнес-логику,
